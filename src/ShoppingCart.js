@@ -14,10 +14,10 @@ class ShoppingCart {
     getItems() {
         return this.items;
     }
-    clear(){
+    clear() {
         return this.items = [];
     }
-    total(){
+    total() {
         return this.items.reduce((totalSum, nextItem) => {
             totalSum += nextItem.quantity * nextItem.pricePerUnit;
             return totalSum;
@@ -25,14 +25,4 @@ class ShoppingCart {
     }
 }
 
-// const cart = new ShoppingCart('Lidl');
-// cart.addItem("item 1", 1, 15.5);
-// cart.addItem("item 2", 2, 3);
-// cart.addItem("item 3", 10, 2);
-// cart.addItem("item 4", 0, 2);
-// cart.addItem("item 5", 2, 0);
-
-// console.log(cart);
-// cart.clear();
-// console.log(cart);
-module.exports = ShoppingCart ;
+module.exports = ShoppingCart;
